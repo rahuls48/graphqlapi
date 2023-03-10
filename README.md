@@ -5,6 +5,7 @@ getting a recipe by ID, getting the most recent recipes, editing a recipe, and d
 Usage
 Queries
   Get a recipe by ID
+  ```
     query {
       recipe(ID: "RECIPE_ID") {
         id
@@ -15,7 +16,9 @@ Queries
         ingredients
       }
     }
+  ```   
   Get the most recent recipes
+  ```
     query {
       getRecipes(amount: 10) {
         id
@@ -26,8 +29,10 @@ Queries
         ingredients
       }
     }
+  ```
 Mutations
   Create a new recipe 
+  ```
     mutation {
       createRecipe(recipeInput: {
         name: "Recipe Name"
@@ -43,7 +48,9 @@ Mutations
         ingredients
       }
       }
+   ```
   Edit a recipe
+  ```
     mutation {
       editRecipe(ID: "RECIPE_ID", recipeInput: {
         name: "New Recipe Name"
@@ -52,11 +59,13 @@ Mutations
         ingredients: ["New Ingredient 1", "New Ingredient 2"]
       })
     }
+   ```
   Delete a recipe
+   ```
   mutation {
     deleteRecipe(ID: "RECIPE_ID")
     }
-   
+   ```
 
     
     
