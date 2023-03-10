@@ -4,9 +4,8 @@ const recipeSchema = new Schema({
     name: String,
     description: String,
     createdAt: String,
-    thumbsUp: Number,
-    thumbsDown: Number 
-
+    instructions: String,
+    ingredients: [String]   
 });
 
 module.exports = model('Recipe',recipeSchema);
